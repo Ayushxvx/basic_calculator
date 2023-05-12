@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        form{
+            background-color: rgb(3, 2, 24);
+            margin-top: 250px;
+            margin-left:auto;
+            margin-right:auto;
+            width: 400px;
+        }
+        input{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background: transparent;
+            width: 350px;
+            color: limegreen;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: right;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .btn{
+            margin: 15px;
+            font-size: 2em;
+            font-family: sans-serif;
+            width: 60px;
+            height: 60px;
+            border-radius:20px;
+        }
+        .btn:hover{
+            box-shadow: 5px 5px 5px white;
+            cursor: pointer;
+        }
+        #equal{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="enter the experssion" id="input" disabled="true">
+        <button class="btn" onclick="setvalue(9)">9</button>
+        <button class="btn" onclick="setvalue(8)">8</button>
+        <button class="btn" onclick="setvalue(7)">7</button>
+        <button class="btn" id="plus">+</button><br>
+        <button class="btn" onclick="setvalue(6)">6</button>
+        <button class="btn" onclick="setvalue(5)">5</button>
+        <button class="btn" onclick="setvalue(4)">4</button>
+        <button class="btn" onclick="setvalue('-')">-</button><br>
+        <button class="btn"  onclick="setvalue(3)">3</button>
+        <button class="btn"  onclick="setvalue(2)">2</button>
+        <button class="btn"  onclick="setvalue(1)">1</button>
+        <button class="btn" onclick="setvalue('*')">X</button><br>
+        <button class="btn"  onclick="setvalue(0)">0</button>
+        <button class="btn"  onclick="setvalue('00')" >00</button>
+        <button class="btn" onclick="setvalue('/')">/</button>
+        <button class="btn" onclick="clearscr()">AC</button>
+        <button class="btn" id="equal"onclick="answer()">=</button>
+        
+    </form>
+    <script src="src.js"></script>
+</body>
+</html>
